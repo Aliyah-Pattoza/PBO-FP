@@ -6,11 +6,14 @@ import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 import java.text.DecimalFormat;
 
+import object.SuperObject;
+
 
 public class UI {
 	GamePanel gp;
 	Graphics2D g2;
 	Font arial_30, arial_15, arial_80B;
+	BufferedImage heart_full, heart_blank;
 	public boolean messageOn = false;
 	public String message = "";
 	int messageCounter = 0;
@@ -24,6 +27,7 @@ public class UI {
 		arial_30 = new Font("Cambria", Font.BOLD, 30);
 		arial_15 = new Font("Arial", Font.PLAIN, 10);
 		arial_80B = new Font("Arial", Font.BOLD, 80);
+		
 	}
 	
 	public void showMessage(String text) {
@@ -39,7 +43,7 @@ public class UI {
 		
 		// PLAY STATE
 		if(gp.gameState == gp.playState) {
-			// Nothing
+			
 		}
 		// PAUSE STATE
 		if(gp.gameState == gp.pauseState) {

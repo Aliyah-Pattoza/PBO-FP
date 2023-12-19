@@ -44,6 +44,7 @@ public class Player extends Entity {
 		worldY = gp.tileSize * 27; 
 		speed = 4;
 		direction = "down";
+		
 	}
 	
 	public void getPlayerImage() {
@@ -183,15 +184,21 @@ public class Player extends Entity {
 			case "Lumpur":
 				gp.playSE(3);
 				gp.obj[i].collision = true;
+				poin = poin - 10;
+				gp.obj[i] = null;
+				gp.ui.showMessage("Kamu terkena lumpur");
 				break;
 			case "Air":
 				gp.playSE(3);
 				gp.obj[i].collision = true;
+				poin = poin - 5;
+				gp.obj[i] = null;
+				gp.ui.showMessage("Kamu terkena genangan air");
 				break;
 			case "Goal":
 				gp.ui.gameFinished = true;
 				gp.stopMusic();
-				gp.playSE(1);
+				gp.playSE(4);
 				break;
 			}
 		}

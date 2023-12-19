@@ -15,7 +15,8 @@ public class Sound {
 		soundURL[0] = getClass().getResource("/sound/MainSoundGame.wav").toURI().toURL();
 		soundURL[1] = getClass().getResource("/sound/Item.WAV").toURI().toURL();
 		soundURL[2] = getClass().getResource("/sound/boots.WAV").toURI().toURL();
-		soundURL[3] = getClass().getResource("/sound/wrong.WAV").toURI().toURL();
+		soundURL[3] = getClass().getResource("/sound/splash.wav").toURI().toURL();
+		soundURL[4] = getClass().getResource("/sound/fin.wav").toURI().toURL();
 		} catch(Exception e) {
 			 e.printStackTrace();
 		}
